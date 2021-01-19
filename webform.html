@@ -2,30 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="webform.css" media="all">
     <title>Contact Form</title>
 </head>
 <body>
 <div class="container">
     <form action="" method="POST" class="form">
-        <div class="formgroups">
+        <div class="form-group">
             <label for="name" class="form-label">Your Name</label><!--for attribute has to match name-attribute-->
             <!--attribute name becomes variable in php, The tabindex attribute specifies the tab order of an element (when the "tab" button is used for navigating).-->
             <input type="text" class="form-control" id="name" name="name" placeholder="Your name" tabindex="1" required>
         </div>
-        <div class="formgroups">
+        <div class="form-group">
             <label for="email" class="form-label">Your email</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="Your email" tabindex="2" required>
         </div>
-        <div class="formgroups">
-            <label for="subject" class="form-label"></label>
+        <div class="form-group">
+            <label for="subject" class="form-label">Subject</label>
             <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" tabindex="3" required>
         </div>
-        <div class="formgroups">
-            <label for="message" class="form-label"></label>
-            <textarea rows="5" cols="50" id="message" name="message" placeholder="Enter message..." tabindex="4"></textarea>
+        <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" rows="5" cols="50" id="message" name="message" placeholder="Enter message..." tabindex="4"></textarea>
         </div>
         <div>
-            <button type="submit">Send Message</button>
+            <button type="submit" class="btn">Send Message</button>
         </div>
     </form>
 </div>

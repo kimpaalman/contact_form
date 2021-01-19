@@ -1,0 +1,76 @@
+:root{
+    --font-color: #999;
+    --hover-font-color: orange;
+}
+body{
+    height: 100vh;
+    font-family: "Raleway", sans-serif;
+    /*Center child*/
+    display: flex; /*Activate flex to center child*/
+    justify-content: center; /*horizontal*/
+    align-items: center; /*Vertical*/
+}
+
+.container {
+    width: 500px;
+}
+
+/*Styling form-elements*/
+/*Div that surrounds each element*/
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/*Labels*/
+.form-label {
+    font-size: .75rem; /*Smaller than input-field for animated effect later on*/
+    color: var(--font-color);
+    display: block; /*Label appears above form-element*/
+    opacity: 1; /*Used later on to hide or show these elements*/
+}
+
+/*Form-control (inside input element)*/
+.form-control {
+    /*remove auto-styling*/
+    box-shadow: none;
+    border-radius: 0;
+    border-color: #ccc;
+    border-style: none none solid none; /*top, right, bottom, left*/
+    width: 100%; /*Fill up entire container*/
+    font-size: 1.25rem;
+}
+
+/*Placeholder form-control: pseudoselector*/
+.form-control::placeholder {
+    color: #aaa;
+}
+
+/*Focus of elements: pseudoselector*/
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--hover-font-color); /*Same as hover*/
+    outline: none; /*Outline gets applied on focus (glow)*/
+}
+
+/*Submit-button*/
+.btn {
+    background: 0 0 #fff;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    color: var(--font-color);
+    font-size: 1rem;
+    padding: 10px 50px; /*Padding to make button bigger and noticeable*/
+    text-transform: uppercase; /*change text to capital*/
+}
+
+
+/*Hover: pseudo-selector*/
+.btn:hover {
+    border-color: var(--hover-font-color);
+    color: var(--hover-font-color);
+}
+
+/*Textarea*/
+textarea {
+    resize: none; /*Disable resize element*/
+}
